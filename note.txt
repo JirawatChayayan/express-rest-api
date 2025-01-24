@@ -1,0 +1,30 @@
+//dev dependency -D
+npm i nodemon -D
+
+//ECMA script moduke
+  "type": "module",
+
+  superadmin
+
+//create user authorize mongo db
+db.createUser(
+{
+    user:"superadmin",
+    pwd:"123456",
+    roles:[
+      { 
+        role : 'root',
+        db:"admin"
+        
+      }
+    ]
+})
+
+//config mongo for enable security 
+/etc/mongod.conf                                                                                        
+security:
+ authorization: "enabled"
+
+
+
+
