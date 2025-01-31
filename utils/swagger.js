@@ -3,7 +3,7 @@ import swaggerUi from 'swagger-ui-express'
 import dotenv from 'dotenv'
 
 dotenv.config()
-
+//url: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -14,7 +14,6 @@ const options = {
     },
     servers: [
       {
-        // url: `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
         url: `http://${process.env.HOST}`
       },
     ],
